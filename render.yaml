@@ -1,8 +1,7 @@
-# render.yaml  (place in the repo root)
 services:
   - type: web
     name: intakeflow-api
-    runtime: dotnet          # <-- this is the correct key
+    runtime: dotnet           
     rootDir: IntakeFlowApi
     plan: free
     buildCommand: dotnet restore && dotnet publish -c Release -o out
