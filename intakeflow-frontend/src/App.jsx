@@ -1,8 +1,6 @@
 // intakeflow-frontend/src/App.jsx
 import React, { useEffect, useMemo, useState } from "react";
-
-const API_BASE = "http://localhost:5000/api/Projects";
-const API_KEY = "dev-12345";
+import { API_BASE, API_KEY } from "./config"; // import from config.js
 
 const STATUSES = ["Initiated", "Approved", "InProgress", "OnHold", "Completed", "Rejected"];
 
