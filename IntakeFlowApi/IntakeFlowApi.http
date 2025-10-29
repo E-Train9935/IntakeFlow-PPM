@@ -1,0 +1,6 @@
+@IntakeFlowApi_HostAddress = http://localhost:5218
+
+GET {{IntakeFlowApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

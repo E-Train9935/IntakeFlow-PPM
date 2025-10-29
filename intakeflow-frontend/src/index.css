@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: subtle focus ring color tune */
+:root {
+  --ring-color: 123 92 255; /* brand-500 */
+}
+*,:before,:after { @apply antialiased; }
+:focus-visible { outline: 2px solid rgb(var(--ring-color)); outline-offset: 2px; }
+
+/* Glass card helper */
+.glass {
+  @apply bg-white/10 backdrop-blur-md border border-white/15 shadow-soft rounded-2xl;
+}
+.glass-strong {
+  @apply bg-white/15 backdrop-blur-lg border border-white/20 shadow-soft rounded-3xl;
+}
+
+/* Text+chip helpers */
+.badge {
+  @apply inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium;
+}
