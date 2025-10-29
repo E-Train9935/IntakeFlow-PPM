@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: intakeflow-api
+    env: dotnet
+    rootDir: IntakeFlowApi
+    plan: free
+    buildCommand: dotnet publish -c Release -o out
+    startCommand: dotnet out/IntakeFlowApi.dll --urls http://0.0.0.0:10000
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: INTAKEFLOW_API_KEY
+        value: dev-12345
+    healthCheckPath: /api/Projects
